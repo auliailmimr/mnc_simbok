@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Si Mbok Panduan Gaya</title>
+<link rel="stylesheet" href="./simbok.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+.sg{width:1440px;padding:80px;display:flex;flex-direction:column;gap:72px}
+.sg-sec{display:flex;flex-direction:column;gap:24px}
+.sg-head{display:flex;flex-direction:column;gap:8px;padding-bottom:16px;border-bottom:1px solid #F0DFC9}
+.sg-head p{font-size:15px;line-height:22px;color:#6E5E52;max-width:760px}
+.sg-sw{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.sw{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#fff;border:1px solid #F0DFC9}
+.sw-chip{height:96px;border-bottom:1px solid #F0DFC9}
+.sw-meta{display:flex;flex-direction:column;gap:2px;padding:12px 14px 14px;font-size:13px;line-height:18px;color:#6E5E52}
+.sw-meta strong{font-size:14px;color:#1D1410}
+.mono{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:13px;color:#1D1410}
+.sg-box{background:#fff;border:1px solid #F0DFC9;border-radius:20px;overflow:hidden}
+.sg-table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
+.sg-table th,.sg-table td{text-align:left;padding:12px 16px;border-bottom:1px solid #F0DFC9;vertical-align:top}
+.sg-table tr:last-child td{border-bottom:0}
+.sg-table th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6E5E52;background:#FFFBF5}
+.sg-table td{color:#1D1410}
+.ok{color:#2F6F3D;font-weight:700}
+.warn{color:#A9410A;font-weight:700}
+.type-row{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:center;padding:18px 24px;border-bottom:1px solid #F0DFC9}
+.type-row:last-child{border-bottom:0}
+.type-spec{display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:18px;color:#6E5E52}
+.type-spec strong{font-size:14px;color:#1D1410}
+.sg-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.sg-panel{display:flex;flex-direction:column;gap:16px;padding:24px}
+.sg-cap{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6E5E52}
+.space-row{display:flex;align-items:center;gap:12px;font-size:13px;color:#6E5E52}
+.space-bar{height:12px;border-radius:4px;background:#F26A1B}
+.radius-row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.radius-box{width:72px;height:72px;background:#FDE7CC;border:2px solid #D9540C}
+.state-grid{display:grid;grid-template-columns:200px repeat(4,minmax(0,1fr));gap:16px 24px;align-items:center;padding:24px}
+.state-grid .sg-cap{align-self:end}
+.on-orange{background:linear-gradient(105deg,#F26A1B,#FF9E33);border-radius:16px;padding:16px;display:flex;justify-content:center}
+.demo-row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.demo-item{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.sg-pre{margin:0;padding:24px;background:#1D1410;color:#F3E6D6;border-radius:20px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:13px;line-height:21px;white-space:pre;overflow:auto}
+</style>
+<style>.nav-panel[hidden]{display:none !important}</style>
+</head>
+<body>
+<div class="sm sg" data-name="Panduan Gaya">
+
+  <div class="stack" style="gap: 16px">
+    <span class="label">Panduan gaya dan komponen</span>
+    <h1 class="h1">Si Mbok, sistem visual</h1>
+    <p class="body-lg" style="max-width: 760px">Token warna, huruf, jarak, dan komponen yang dipakai di halaman. Semua nilai sama persis dengan artboard Laptop, Tablet, dan HP, jadi bisa langsung dipindah ke Next.js dan Tailwind.</p>
+  </div>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Warna</h2><p>Sepuluh warna dari brief, ditambah satu oranye teks yang lebih gelap supaya harga dan label kecil lolos WCAG AA.</p></div>
+    <div class="sg-sw">
+      <div class="sw"><div class="sw-chip" style="background: #FFF8EE"></div><div class="sw-meta"><strong>Krem latar</strong><span class="mono">#FFF8EE · cream</span><span>Latar halaman</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #FFFFFF"></div><div class="sw-meta"><strong>Putih kartu</strong><span class="mono">#FFFFFF · white</span><span>Kartu, tombol terang</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #1D1410"></div><div class="sw-meta"><strong>Tinta</strong><span class="mono">#1D1410 · ink</span><span>Teks utama, teks di atas oranye, footer</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #6E5E52"></div><div class="sw-meta"><strong>Abu hangat</strong><span class="mono">#6E5E52 · muted</span><span>Teks sekunder</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #F26A1B"></div><div class="sw-meta"><strong>Oranye utama</strong><span class="mono">#F26A1B · orange</span><span>Tombol, banner, penanda peta</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #D9540C"></div><div class="sw-meta"><strong>Oranye tua</strong><span class="mono">#D9540C · orange-deep</span><span>Teks aksen besar, garis tombol, bintang</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #A9410A"></div><div class="sw-meta"><strong>Oranye teks</strong><span class="mono">#A9410A · orange-text</span><span>Tambahan. Harga, label, link kecil</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #FFB627"></div><div class="sw-meta"><strong>Kuning keju</strong><span class="mono">#FFB627 · cheese</span><span>Gradasi, ilustrasi, aksen di footer</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #FDE7CC"></div><div class="sw-meta"><strong>Persik muda</strong><span class="mono">#FDE7CC · peach</span><span>Lencana, latar ikon, hover garis</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #F0DFC9"></div><div class="sw-meta"><strong>Garis halus</strong><span class="mono">#F0DFC9 · line</span><span>Pinggir kartu, pemisah</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: #3E8E4F"></div><div class="sw-meta"><strong>Hijau daun</strong><span class="mono">#3E8E4F · leaf</span><span>Detail kecil saja: ikon jam, daun</span></div></div>
+      <div class="sw"><div class="sw-chip" style="background: linear-gradient(100deg, #FFF8EE 0%, #FFE0AD 55%, #FF9E33 100%)"></div><div class="sw-meta"><strong>Gradasi hero</strong><span class="mono">#FFF8EE · #FFE0AD · #FF9E33</span><span>Kiri ke kanan. Tablet dan HP: atas ke bawah</span></div></div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Kontras WCAG AA</h2><p>Teks kecil butuh 4,5 : 1. Teks besar (24 px, atau tebal 19 px ke atas) cukup 3 : 1. Putih di atas oranye utama hanya 3,1 : 1, jadi tombol dan banner oranye memakai teks tinta.</p></div>
+    <div class="sg-box">
+      <table class="sg-table">
+        <thead><tr><th>Pasangan</th><th>Rasio</th><th>Dipakai untuk</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Tinta di krem</td><td class="mono">17,2 : 1</td><td>Judul dan isi</td><td class="ok">Lolos</td></tr>
+          <tr><td>Abu hangat di krem / putih</td><td class="mono">5,9 / 6,2 : 1</td><td>Teks sekunder</td><td class="ok">Lolos</td></tr>
+          <tr><td>Oranye teks #A9410A di putih / krem / persik</td><td class="mono">6,1 / 5,8 / 5,1 : 1</td><td>Harga, label, link, tombol garis</td><td class="ok">Lolos</td></tr>
+          <tr><td>Tinta di oranye utama</td><td class="mono">5,9 : 1</td><td>Label tombol utama, teks banner promo dan WhatsApp</td><td class="ok">Lolos</td></tr>
+          <tr><td>Kuning keju di tinta</td><td class="mono">10,3 : 1</td><td>Footer, lencana gelap</td><td class="ok">Lolos</td></tr>
+          <tr><td>Oranye tua #D9540C di krem</td><td class="mono">3,8 : 1</td><td>Hanya teks besar: aksen judul hero, logo</td><td class="ok">Lolos teks besar</td></tr>
+          <tr><td>Putih di oranye utama</td><td class="mono">3,1 : 1</td><td>Tidak dipakai untuk teks</td><td class="warn">Hindari</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Huruf</h2><p>Plus Jakarta Sans untuk semua teks, Bricolage Grotesque hanya untuk nama merek. Ukuran dalam px, format ukuran / tinggi baris.</p></div>
+    <div class="sg-box">
+      <div class="type-row"><div class="type-spec"><strong>Judul hero</strong><span>ExtraBold 64/68, spasi -2%</span><span>Tablet 52/56 · HP 40/44</span></div><div class="h1">Keju Meleleh, <span class="accent">Rasa Rumahan.</span></div></div>
+      <div class="type-row"><div class="type-spec"><strong>Judul bagian</strong><span>ExtraBold 40/46</span><span>Tablet 36/42 · HP 30/36</span></div><div class="h2">Favorit Pelanggan</div></div>
+      <div class="type-row"><div class="type-spec"><strong>Subjudul</strong><span>Bold 24/32 · HP 20/28</span></div><div class="h3">Dapur Si Mbok</div></div>
+      <div class="type-row"><div class="type-spec"><strong>Nama menu</strong><span>Bold 18/24 · HP 16/22</span></div><div class="menu-name">Smoked Beef Cheese</div></div>
+      <div class="type-row"><div class="type-spec"><strong>Isi besar</strong><span>Regular 18/28 · HP 16/26</span></div><p class="body-lg">Mac and cheese hangat dengan keju asli dan bumbu nusantara.</p></div>
+      <div class="type-row"><div class="type-spec"><strong>Isi</strong><span>Regular 16/26</span></div><p class="body">Sampai sekarang, setiap porsi masih dimasak satu per satu.</p></div>
+      <div class="type-row"><div class="type-spec"><strong>Isi kecil</strong><span>Regular 15/22</span></div><p class="body-sm">Jl. Contoh Raya No. 12, Kota Batu</p></div>
+      <div class="type-row"><div class="type-spec"><strong>Label</strong><span>Bold 12/16, kapital, jarak huruf 14%</span></div><span class="label">Khas dapur Si Mbok</span></div>
+      <div class="type-row"><div class="type-spec"><strong>Harga</strong><span>ExtraBold 18/24, #A9410A</span></div><span class="price">Rp 22.000</span></div>
+      <div class="type-row"><div class="type-spec"><strong>Nama merek</strong><span>Bricolage Grotesque ExtraBold 22</span><span>Kicker: Jakarta Bold 10, jarak 20%</span></div>
+        <span class="brand"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 18L28 8l8 10Z" fill="#FFD15C" stroke="#1D1410" stroke-width="2" stroke-linejoin="round"></path><path d="M4 18h32v13H4Z" fill="#FFB627" stroke="#1D1410" stroke-width="2" stroke-linejoin="round"></path><circle cx="13" cy="24.5" r="3" fill="#E39A1F"></circle><circle cx="25" cy="23" r="2.2" fill="#E39A1F"></circle><circle cx="30.5" cy="27.5" r="1.6" fill="#E39A1F"></circle><circle cx="20" cy="14.5" r="1.6" fill="#E39A1F"></circle></svg><span class="brand-text"><span class="brand-kicker">MAC AND CHEESE</span><span class="brand-name">Si Mbok</span></span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Jarak, radius, bayangan</h2><p>Skala jarak kelipatan 4. Kontainer maksimal 1440 dengan padding samping 80 / 32 / 16, jadi isi 1280 di laptop.</p></div>
+    <div class="sg-cols">
+      <div class="sg-box sg-panel">
+        <span class="sg-cap">Skala jarak</span>
+        <div class="space-row"><span class="space-bar" style="width: 4px"></span>4</div>
+        <div class="space-row"><span class="space-bar" style="width: 8px"></span>8</div>
+        <div class="space-row"><span class="space-bar" style="width: 12px"></span>12</div>
+        <div class="space-row"><span class="space-bar" style="width: 16px"></span>16</div>
+        <div class="space-row"><span class="space-bar" style="width: 24px"></span>24 · gap kartu</div>
+        <div class="space-row"><span class="space-bar" style="width: 32px"></span>32</div>
+        <div class="space-row"><span class="space-bar" style="width: 48px"></span>48 · bawah judul bagian</div>
+        <div class="space-row"><span class="space-bar" style="width: 56px"></span>56 · bagian di HP</div>
+        <div class="space-row"><span class="space-bar" style="width: 72px"></span>72 · bagian di tablet</div>
+        <div class="space-row"><span class="space-bar" style="width: 96px"></span>96 · bagian di laptop</div>
+      </div>
+      <div class="sg-box sg-panel">
+        <span class="sg-cap">Radius</span>
+        <div class="radius-row">
+          <div class="demo-item"><div class="radius-box" style="border-radius: 12px"></div><span class="mono">12 ikon</span></div>
+          <div class="demo-item"><div class="radius-box" style="border-radius: 20px"></div><span class="mono">20 media</span></div>
+          <div class="demo-item"><div class="radius-box" style="border-radius: 28px"></div><span class="mono">28 kartu</span></div>
+        </div>
+        <div class="radius-row">
+          <div class="demo-item"><div class="radius-box" style="border-radius: 36px; width: 120px"></div><span class="mono">36 banner</span></div>
+          <div class="demo-item"><div class="radius-box" style="border-radius: 999px; width: 120px; height: 52px"></div><span class="mono">999 pil</span></div>
+        </div>
+      </div>
+      <div class="sg-box sg-panel">
+        <span class="sg-cap">Bayangan</span>
+        <div class="card" style="padding: 20px"><strong style="font-size: 14px">shadow-card</strong><p class="mono" style="margin-top: 6px">0 1px 2px ink/4%, 0 8px 24px ink/6%</p></div>
+        <div class="card is-hover" style="padding: 20px; box-shadow: 0 2px 4px rgba(29,20,16,.06), 0 18px 40px rgba(217,84,12,.16); border-color: #F5C9A3"><strong style="font-size: 14px">shadow-lift (hover)</strong><p class="mono" style="margin-top: 6px">0 18px 40px orange-deep/16%, naik 4 px</p></div>
+        <p class="body-sm">Fokus keyboard: garis 3 px tinta, jarak 3 px. Di footer gelap garisnya kuning keju.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Tombol</h2><p>Bentuk pil. Tinggi 52 (kecil 44, tetap memenuhi target sentuh). Padding samping 28 / 18. Ikon 20 / 18. Label pakai kata kerja.</p></div>
+    <div class="sg-box state-grid">
+      <span></span><span class="sg-cap">Default</span><span class="sg-cap">Hover</span><span class="sg-cap">Fokus</span><span class="sg-cap">Nonaktif</span>
+      <span class="sg-cap">Utama</span>
+      <div><a class="btn btn-primary" href="#">Pesan Sekarang</a></div>
+      <div><a class="btn btn-primary is-hover" href="#">Pesan Sekarang</a></div>
+      <div><a class="btn btn-primary is-focus" href="#">Pesan Sekarang</a></div>
+      <div><button class="btn" type="button" disabled>Pesan Sekarang</button></div>
+      <span class="sg-cap">Garis</span>
+      <div><a class="btn btn-outline" href="#">Lihat Menu</a></div>
+      <div><a class="btn btn-outline is-hover" href="#">Lihat Menu</a></div>
+      <div><a class="btn btn-outline is-focus" href="#">Lihat Menu</a></div>
+      <div><button class="btn" type="button" disabled>Lihat Menu</button></div>
+      <span class="sg-cap">Terang (di oranye)</span>
+      <div class="on-orange"><a class="btn btn-light" href="#">Chat Si Mbok</a></div>
+      <div class="on-orange"><a class="btn btn-light is-hover" href="#">Chat Si Mbok</a></div>
+      <div class="on-orange"><a class="btn btn-light is-focus" href="#">Chat Si Mbok</a></div>
+      <div class="on-orange"><button class="btn" type="button" disabled>Chat Si Mbok</button></div>
+      <span class="sg-cap">Kecil</span>
+      <div><a class="btn btn-primary btn-sm" href="#">Pesan</a></div>
+      <div><a class="btn btn-primary btn-sm is-hover" href="#">Pesan</a></div>
+      <div><a class="btn btn-primary btn-sm is-focus" href="#">Pesan</a></div>
+      <div><button class="btn btn-sm" type="button" disabled>Habis hari ini</button></div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Lencana</h2><p>Tinggi 28, Bold 12 kapital. Lencana catatan untuk menandai data contoh.</p></div>
+    <div class="sg-box sg-panel" style="flex-direction: row; flex-wrap: wrap; align-items: center; gap: 24px">
+      <div class="demo-item"><span class="badge">Khas Dapur Si Mbok</span><span class="mono">label</span></div>
+      <div class="demo-item"><span class="badge badge-white"><svg class="chili" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.5 9.5c-1.5 5.5 2.5 11 11.5 11.5-4.8-2.5-6.2-6.6-6-9.6.1-1.6-1-3-2.7-3.1-1.2-.1-2.4.4-2.8 1.2Z"></path><path d="M9.5 8.3c.2-2.2 1.6-3.6 3.8-3.8" fill="none" stroke="#3E8E4F" stroke-width="2" stroke-linecap="round"></path></svg>Pedas</span><span class="mono">pedas</span></div>
+      <div class="demo-item"><span class="badge badge-soldout">Stok habis</span><span class="mono">soldout</span></div>
+      <div class="demo-item"><span class="badge badge-ink">Terbatas</span><span class="mono">ink</span></div>
+      <div class="demo-item"><span class="badge badge-note">Contoh</span><span class="mono">note</span></div>
+      <div class="demo-item" style="padding: 24px 24px 0 0"><div style="position: relative; width: 112px; height: 112px"><div class="seal" style="top: 0px; right: 0px"><strong>Terbatas</strong><span>Sampai akhir<br>bulan</span></div></div><span class="mono">seal, diputar -12°</span></div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Kartu kategori</h2><p>Gambar 1:1, nama Bold 16, panah dalam lingkaran persik. Hover: kartu naik 4 px, panah jadi oranye. Di tablet dan HP, daftar bisa digeser menyamping.</p></div>
+    <div class="demo-row">
+      <div class="demo-item" style="width: 190px"><span class="sg-cap">Default</span>
+        <a class="card lift cat-card" href="#" style="width: 100%"><div class="ph ph-1 r-1x1"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div><span class="cat-name">Original<span class="chip-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></a>
+      </div>
+      <div class="demo-item" style="width: 190px"><span class="sg-cap">Hover</span>
+        <a class="card lift cat-card is-hover" href="#" style="width: 100%"><div class="ph ph-5 r-1x1"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div><span class="cat-name">Pedas<span class="chip-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></a>
+      </div>
+      <div class="demo-item" style="width: 190px"><span class="sg-cap">Fokus</span>
+        <a class="card lift cat-card is-focus" href="#" style="width: 100%"><div class="ph ph-6 r-1x1"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div><span class="cat-name">Minuman<span class="chip-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Kartu menu</h2><p>Gambar 4:3, nama, deskripsi satu baris (dua baris di HP), harga, tombol Pesan yang membuka WhatsApp dengan nama menu. Keadaan Pedas dan Stok habis bisa digabung.</p></div>
+    <div class="demo-row">
+      <div class="demo-item" style="width: 290px"><span class="sg-cap">Default</span>
+        <article class="card lift menu-card" style="width: 100%"><div class="menu-media"><div class="ph ph-1 r-4x3"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div></div><div class="menu-body"><h3 class="menu-name">Mac and Cheese Original</h3><p class="menu-desc">Keju cheddar leleh dengan saus putih lembut.</p><div class="menu-foot"><span class="price">Rp 22.000</span><a class="btn btn-primary btn-sm" href="#">Pesan</a></div></div></article>
+      </div>
+      <div class="demo-item" style="width: 290px"><span class="sg-cap">Pedas</span>
+        <article class="card lift menu-card" style="width: 100%"><div class="menu-media"><div class="ph ph-2 r-4x3"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div><div class="menu-badges"><span class="badge badge-white"><svg class="chili" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.5 9.5c-1.5 5.5 2.5 11 11.5 11.5-4.8-2.5-6.2-6.6-6-9.6.1-1.6-1-3-2.7-3.1-1.2-.1-2.4.4-2.8 1.2Z"></path><path d="M9.5 8.3c.2-2.2 1.6-3.6 3.8-3.8" fill="none" stroke="#3E8E4F" stroke-width="2" stroke-linecap="round"></path></svg>Pedas</span></div></div><div class="menu-body"><h3 class="menu-name">Pedas Sambal Matah</h3><p class="menu-desc">Sambal matah segar, tingkat pedas bisa dipilih.</p><div class="menu-foot"><span class="price">Rp 26.000</span><a class="btn btn-primary btn-sm" href="#">Pesan</a></div></div></article>
+      </div>
+      <div class="demo-item" style="width: 290px"><span class="sg-cap">Stok habis</span>
+        <article class="card lift menu-card is-soldout" style="width: 100%"><div class="menu-media"><div class="ph ph-3 r-4x3"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div><div class="menu-badges"><span class="badge badge-soldout">Stok habis</span></div></div><div class="menu-body"><h3 class="menu-name">Smoked Beef Cheese</h3><p class="menu-desc">Daging asap panggang dengan keju tebal.</p><div class="menu-foot"><span class="price">Rp 35.000</span><button class="btn btn-sm" type="button" disabled>Habis hari ini</button></div></div></article>
+      </div>
+      <div class="demo-item" style="width: 290px"><span class="sg-cap">Hover</span>
+        <article class="card lift menu-card is-hover" style="width: 100%"><div class="menu-media"><div class="ph ph-5 r-4x3"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div></div><div class="menu-body"><h3 class="menu-name">Mac Cheese Rendang</h3><p class="menu-desc">Rendang suwir empuk di atas keju meleleh.</p><div class="menu-foot"><span class="price">Rp 32.000</span><a class="btn btn-primary btn-sm is-hover" href="#">Pesan</a></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Kartu cabang dan kartu testimoni</h2><p>Kartu cabang: ikon lokasi, nama, alamat, jam buka, link petunjuk arah. Fokus di dalam kartu memberi garis oranye tua. Kartu testimoni: foto 4:3, bintang lima, kutipan Medium 18/28, nama dan kota.</p></div>
+    <div class="demo-row">
+      <div class="demo-item" style="width: 460px"><span class="sg-cap">Cabang, default</span>
+        <article class="card lift branch" style="width: 100%"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><div class="branch-body"><div class="branch-title"><h3>Kota Batu</h3><span class="badge badge-note">Alamat contoh</span></div><p class="body-sm">Jl. Contoh Raya No. 12, Kota Batu</p><span class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Setiap hari 10.00 sampai 21.00 WIB</span><a class="text-link" href="#">Petunjuk arah</a></div></article>
+        <span class="sg-cap" style="margin-top: 12px">Cabang, hover</span>
+        <article class="card lift branch is-hover" style="width: 100%"><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><div class="branch-body"><div class="branch-title"><h3>Dinoyo</h3><span class="badge badge-note">Alamat contoh</span></div><p class="body-sm">Jl. Contoh Kampus No. 21, Dinoyo, Malang</p><span class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Setiap hari 10.00 sampai 21.00 WIB</span><a class="text-link" href="#">Petunjuk arah</a></div></article>
+      </div>
+      <div class="demo-item" style="width: 360px"><span class="sg-cap">Testimoni</span>
+        <figure class="card lift testi" style="width: 100%"><div class="ph ph-4 r-4x3"><span class="ph-tag">Foto dummy</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h36a18 14 0 0 1-36 0Z"></path><path d="M17 42h14"></path><path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"></path></svg></div><div class="testi-body"><div class="stars" role="img" aria-label="Rating 5 dari 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"></path></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"></path></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"></path></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"></path></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"></path></svg></div><blockquote class="quote">“Kejunya benar-benar meleleh dan tidak eneg. Sambal matahnya bikin nambah.”</blockquote><figcaption class="person"><span class="avatar av-2" aria-hidden="true"></span><span class="stack"><span class="person-name">Rina</span><span class="person-city">Malang</span></span><span class="badge badge-note">Contoh</span></figcaption></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Gambar dummy dan nama lapisan</h2><p>Setiap kotak gambar mengunci rasio dengan aspect-ratio. Gambar asli masuk sebagai img (next/image dengan fill dan object-fit cover) di dalam kotak yang sama, jadi ukuran file berbeda tidak menggeser tata letak.</p></div>
+    <div class="sg-box">
+      <table class="sg-table">
+        <thead><tr><th>Lapisan (data-name)</th><th>Rasio</th><th>Ekspor saran</th><th>Dipakai di</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Foto/Hero</td><td>560 × 520 (ilustrasi vektor)</td><td class="mono">1120 × 1040</td><td>Hero, sisi kanan</td></tr>
+          <tr><td class="mono">Foto/Kategori Original … Camilan</td><td>1:1</td><td class="mono">400 × 400</td><td>Lima kartu kategori</td></tr>
+          <tr><td class="mono">Foto/Menu 1 sampai 4</td><td>4:3</td><td class="mono">800 × 600</td><td>Kartu menu favorit</td></tr>
+          <tr><td class="mono">Foto/Promo</td><td>4:3</td><td class="mono">1200 × 900</td><td>Banner promo</td></tr>
+          <tr><td class="mono">Foto/Dapur</td><td>4:5</td><td class="mono">800 × 1000</td><td>Cerita Si Mbok</td></tr>
+          <tr><td class="mono">Foto/Pelanggan 1</td><td>4:3</td><td class="mono">800 × 600</td><td>Kartu testimoni</td></tr>
+          <tr><td class="mono">Foto/Avatar 1 sampai 4, Foto/Avatar Rina</td><td>1:1 bulat</td><td class="mono">96 × 96</td><td>Bukti sosial, testimoni</td></tr>
+          <tr><td class="mono">Foto/Instagram 1 sampai 7</td><td>1:1</td><td class="mono">600 × 600</td><td>Galeri</td></tr>
+          <tr><td class="mono">Foto/Peta</td><td>Tinggi min 520 di laptop, 16:10 di tablet dan HP</td><td class="mono">Embed Google Maps</td><td>Lokasi</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Daftar komponen untuk Next.js</h2><p>Nama komponen yang disarankan, props, dan kelas yang sama di desain. Bagian halaman memakai komponen ini.</p></div>
+    <div class="sg-box">
+      <table class="sg-table">
+        <thead><tr><th>Komponen</th><th>Props</th><th>Keadaan</th><th>Kelas di desain</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Button</strong></td><td class="mono">variant: primary | outline | light, size: md | sm, href, icon, disabled</td><td>default, hover, fokus, nonaktif</td><td class="mono">.btn .btn-primary .btn-outline .btn-light .btn-sm</td></tr>
+          <tr><td><strong>Badge</strong></td><td class="mono">variant: label | white | ink | soldout | note, icon</td><td>statis</td><td class="mono">.badge</td></tr>
+          <tr><td><strong>CategoryCard</strong></td><td class="mono">title, image, href</td><td>default, hover, fokus</td><td class="mono">.cat-card</td></tr>
+          <tr><td><strong>MenuCard</strong></td><td class="mono">name, description, price, image, spicy, soldOut</td><td>default, hover, fokus, pedas, stok habis</td><td class="mono">.menu-card .is-soldout</td></tr>
+          <tr><td><strong>BranchCard</strong></td><td class="mono">name, address, hours, mapsUrl, isSample</td><td>default, hover, fokus di dalam</td><td class="mono">.branch</td></tr>
+          <tr><td><strong>TestimonialCard</strong></td><td class="mono">quote, name, city, rating, photo, isSample</td><td>default, hover</td><td class="mono">.testi</td></tr>
+          <tr><td><strong>PhotoPlaceholder</strong></td><td class="mono">layer, ratio: 1/1 | 4/3 | 4/5, tone: 1 sampai 7 | soft, src?</td><td>dummy, foto asli</td><td class="mono">.ph .ph-1 … .ph-7 .r-4x3</td></tr>
+          <tr><td><strong>Navbar</strong></td><td class="mono">links, orderHref</td><td>laptop; ikon menu tertutup atau terbuka di tablet dan HP</td><td class="mono">.nav .nav-panel</td></tr>
+          <tr><td><strong>PromoBanner</strong></td><td class="mono">label, title, text, ctaLabel, ctaHref, image, sealText</td><td>statis</td><td class="mono">.promo .seal</td></tr>
+          <tr><td><strong>WhatsAppCTA</strong></td><td class="mono">title, text, phoneDisplay, href</td><td>statis</td><td class="mono">.cta</td></tr>
+          <tr><td><strong>MobileOrderBar</strong></td><td class="mono">href</td><td>tampil hanya di HP, menempel di bawah</td><td class="mono">.order-bar</td></tr>
+          <tr><td><strong>Footer</strong></td><td class="mono">columns, socials, tagline</td><td>statis</td><td class="mono">.footer</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sg-sec">
+    <div class="sg-head"><h2 class="h3">Responsif dan Tailwind</h2><p>HP dulu. Tablet mulai 640 (sm), laptop mulai 1024 (lg). Desain diuji di 390, 768, dan 1440.</p></div>
+    <div class="sg-cols" style="grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr)">
+      <div class="sg-box">
+        <table class="sg-table">
+          <thead><tr><th>Lebar</th><th>Perubahan</th></tr></thead>
+          <tbody>
+            <tr><td><strong>HP</strong><br><span class="mono">di bawah 640</span></td><td>Ikon menu, tombol Pesan menempel di bawah, kategori dan galeri digeser menyamping, kartu menu 2 kolom, hero ditumpuk, kartu Keju Asli di bawah ilustrasi.</td></tr>
+            <tr><td><strong>Tablet</strong><br><span class="mono">640 sampai 1023</span></td><td>Ikon menu plus tombol Pesan di navbar, kartu menu 2 kolom, cerita 2 kolom, peta di atas daftar cabang.</td></tr>
+            <tr><td><strong>Laptop</strong><br><span class="mono">1024 ke atas</span></td><td>Tata letak penuh: kategori 5 kolom, menu 4 kolom, cerita 3 kolom, galeri 7 kolom.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <pre class="sg-pre">// tailwind.config.ts
+theme: {
+  extend: {
+    colors: {
+      cream: '#FFF8EE', ink: '#1D1410', muted: '#6E5E52',
+      orange: { DEFAULT: '#F26A1B', deep: '#D9540C', text: '#A9410A' },
+      cheese: '#FFB627', peach: '#FDE7CC', line: '#F0DFC9', leaf: '#3E8E4F',
+    },
+    fontFamily: {
+      sans: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
+      brand: ['var(--font-bricolage)', 'sans-serif'],
+    },
+    borderRadius: { media: '20px', card: '28px', banner: '36px' },
+    boxShadow: {
+      card: '0 1px 2px rgb(29 20 16 / .04), 0 8px 24px rgb(29 20 16 / .06)',
+      lift: '0 2px 4px rgb(29 20 16 / .06), 0 18px 40px rgb(217 84 12 / .16)',
+    },
+  },
+}
+
+// Link WhatsApp
+const waLink = (text: string) =>
+  `https://wa.me/6281200000000?text=${encodeURIComponent(text)}`
+// MenuCard: waLink(`Halo Si Mbok, saya mau pesan ${name} 1 porsi.`)</pre>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
